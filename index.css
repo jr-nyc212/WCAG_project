@@ -9,9 +9,17 @@ html, body {
 body {
     line-height: 1.5;
     overflow-x: hidden;
+    /* Sticky footer: the body is a full-viewport-height column and
+       <main> takes up any spare space, so the footer always sits at
+       the bottom of the page -- below the about section -- even if
+       the content is shorter than the viewport. */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 main {
     width: 100%;
+    flex: 1 0 auto;
 }
 a {
     color: inherit;
@@ -104,8 +112,61 @@ a {
     border-radius: 40px;
 }
 
+/* About Section */
+.about-section {
+    /* The clouds photo has deep-blue patches (~2.3:1 against #333
+       text). Blending a light gray under it with "screen" lifts every
+       pixel to at least #D9D9D9 (no channel can end up darker than the
+       blend color with screen), so the darkest possible spot behind
+       the text still gives:
+         #333333 body text  ->  >= 8.9:1  (AAA normal text needs 7:1)
+         #156130 "Us"       ->  >= 5.3:1  (AAA large text needs 4.5:1;
+                                           the h2 is 48px, well over
+                                           the 24px large-text cutoff)
+       Everywhere the clouds are whiter than that floor the contrast
+       is higher still. */
+    background-color: #D9D9D9;
+    background-image: url(images/clouds.jpg);
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 700px like the original, but never wider than the viewport
+       minus a 20px gutter each side, so the border never overflows
+       on small screens. */
+    width: min(700px, 100% - 40px);
+    margin: 0 auto;
+    padding: 40px;
+    border: 2px solid #333333;
+    color: #333333;
+}
+.about {
+    min-width: 0;
+}
+.about-heading {
+    margin: 0;
+    font-size: 48px;
+}
+.about span {
+    /* Same brand green as the hero "Eats" and the footer links. */
+    color: #156130;
+}
+.about-link {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.about a {
+    display: inline-block;
+    border: 2px solid #333333;
+    padding: 8px 20px;
+    border-radius: 40px;
+}
+
 /* Footer */
 .footer {
+    margin-top: 100px;
     /* Light instead of dark so the brand green doesn't have to be
        neon-bright to clear AAA contrast here (a dark background
        forces a pale/bright text color; a light one doesn't). The
@@ -170,5 +231,15 @@ a {
     .hero-image {
         width: 100%;
         max-width: 280px;
+    }
+    .about-section {
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .about-heading {
+        font-size: 36px;
+    }
+    .footer {
+        margin-top: 60px;
     }
 }
