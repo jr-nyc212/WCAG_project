@@ -106,7 +106,12 @@ a {
 
 /* Footer */
 .footer {
-    background-color: #333333;
+    /* Light instead of dark so the brand green doesn't have to be
+       neon-bright to clear AAA contrast here (a dark background
+       forces a pale/bright text color; a light one doesn't). The
+       border keeps this read as its own footer band. */
+    background-color: #F7F7F7;
+    border-top: 1px solid #E5E5E5;
 }
 .social-links {
     display: flex;
@@ -118,9 +123,9 @@ a {
     padding: 20px 40px;
     max-width: 800px;
     width: 100%;
-    /* AAA contrast (7.25:1) against the #333333 background above;
-       the original #007000 only measured 2:1 here. */
-    color: #4ADE80;
+    /* Same green as the "Eats" heading (#156130) -- one brand color,
+       not two. 7.04:1 against #F7F7F7, still AAA for normal text. */
+    color: #156130;
 }
 .social-links p {
     display: inline;
