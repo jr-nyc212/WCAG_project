@@ -80,7 +80,10 @@ a {
     margin: 0;
 }
 .hero-heading span {
-    color: #007000;
+    /* Same 142° hue as the footer's #4ADE80 (just darker, for a light
+       background) so the two greens read as one brand color family.
+       7.55:1 on white -- AAA for normal text, not just large text. */
+    color: #156130;
     font-weight: 700;
     line-height: 1;
 }
