@@ -24,6 +24,7 @@ main {
 a {
     color: inherit;
     text-decoration: none;
+
 }
 .icon {
     font-size: 32px;
@@ -119,6 +120,7 @@ a {
 }
 .info {
     margin-left: 200px;
+    font-weight: bold
 }
 .info-heading {
     font-size: 48px;
@@ -129,6 +131,8 @@ a {
        footer links (the new starter used #007000 here, but the project
        already unified all greens on #156130). */
     color: #156130;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 .statistics {
     width: 620px;
