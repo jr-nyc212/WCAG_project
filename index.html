@@ -79,9 +79,11 @@
                 <form>
                     <h2 class="form-heading" id="form-heading">What's Next?</h2>
                     <p class="form-intro">Want pizza through your window?🍕 Receive a notification when the service is available.</p>
-                    <input class="input" type="text" placeholder="Full name" />
-                    <input class="input" type="email" placeholder="Email" />
-                    <div class="submit-button" type="button" onclick="submitForm()">✓</div>
+                    <label for="name">Write your full name</label>
+                    <input class="input" id="name" type="text" placeholder="Rick Deckard" />
+                    <label for="email">Enter your email</label>
+                    <input class="input" id="email" type="email" placeholder="rick.deckard@example.com" />
+                    <button type="button" class="submit-button" onclick="submitForm()">Submit</button>
                 </form>
             </section>
         </main>
