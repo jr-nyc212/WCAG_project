@@ -150,7 +150,8 @@ a {
     max-width: 200px;
 }
 .stat-heading {
-    color: #aaaaaa;
+    /* 7.9:1 on the #333 bar (AAA); the earlier #aaaaaa was 5.4:1. */
+    color: #cccccc;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 0;
@@ -215,6 +216,45 @@ a {
     border: 2px solid #333333;
     padding: 8px 20px;
     border-radius: 40px;
+}
+
+/* Sign Up Form */
+.form-heading {
+    font-size: 48px;
+    margin: 0;
+}
+.form-intro {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.form-section {
+    margin: 120px auto;
+    width: 450px;
+    text-align: center;
+}
+.input {
+    display: block;
+    width: 300px;
+    margin: 5px auto 10px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: 2px solid #333333;
+    font-family: 'Poppins', sans-serif;
+}
+.input::-webkit-input-placeholder {
+    color: #aaaaaa;
+}
+.submit-button {
+    border: 2px solid #333333;
+    padding: 8px 20px;
+    border-radius: 40px;
+    margin: 10px auto 0;
+    width: 130px;
+    font-family: 'Poppins', sans-serif;
+}
+.submit-button:hover {
+    background-color: #dddddd;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -298,7 +338,8 @@ a {
 }
 
 /* 
-Challenges:
-1. Update our images so that they have appropriate alternative texts.
-2. Update any links that are either not recognizable as links or have ambiguous text.
+Challenge:
+1. Add labels for each input field in the form.
+2. Change the placeholder names to be as accessible and helpful as possible (hint: also make sure the text color contrast is good enough).
+3. Update the button text to be less ambiguous.
 */

@@ -23,7 +23,7 @@
                 <a class="nav-link" href="index.html">Home</a>
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#">Contact</a>
-                <a class="nav-link" href="#">Sign up</a>
+                <a class="nav-link" href="#signup">Sign up</a>
             </div>
         </nav>
 
@@ -73,6 +73,17 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Form section -->
+            <section class="form-section" id="signup" aria-labelledby="form-heading">
+                <form>
+                    <h2 class="form-heading" id="form-heading">What's Next?</h2>
+                    <p class="form-intro">Want pizza through your window?🍕 Receive a notification when the service is available.</p>
+                    <input class="input" type="text" placeholder="Full name" />
+                    <input class="input" type="email" placeholder="Email" />
+                    <div class="submit-button" type="button" onclick="submitForm()">✓</div>
+                </form>
+            </section>
         </main>
 
         <!-- Footer -->
@@ -97,6 +108,8 @@
             </div>
         </footer>
         
+        <!-- Form behaviour (clears the fields on submit) -->
+        <script type="module" src="index.js"></script>
         <!-- The two scripts below import the icons we use in our footer -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
