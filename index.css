@@ -294,6 +294,32 @@ a {
     align-items: center;
 }
 
+/* Lists */
+.nav-links,
+.stat-list,
+.social-links {
+    list-style: none;
+}
+.nav-links,
+.stat-list {
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    /* The <li> is now the flex item, so the link is plain inline text
+       again. inline-block makes its margin and padding count fully,
+       which keeps the navbar the same height as before. */
+    display: inline-block;
+}
+.stat-list {
+    /* .statistics is still the flex row, but its only in-flow child is
+       now this list, so the list fills the bar and spreads the stats. */
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 /* Small screens: stack the navbar links and the hero content instead
    of relying on the drone illustration overlapping absolutely-
    positioned text. Widths are set explicitly (rather than left to
