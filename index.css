@@ -26,7 +26,7 @@ a {
     text-decoration: none;
 }
 .icon {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 /* Navbar */
@@ -59,7 +59,7 @@ a {
 .nav-link {
     margin: 5px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .nav-links {
     display: flex;
@@ -96,7 +96,7 @@ a {
     line-height: 1;
 }
 .hero-text {
-    font-size: 20px;
+    font-size: 1.25rem;
     max-width: 300px;
     margin-bottom: 30px;
 }
@@ -121,7 +121,7 @@ a {
     margin-left: 200px;
 }
 .info-heading {
-    font-size: 48px;
+    font-size: 3rem;
     margin: 0;
 }
 .info a {
@@ -152,12 +152,12 @@ a {
 .stat-heading {
     /* 7.9:1 on the #333 bar (AAA); the earlier #aaaaaa was 5.4:1. */
     color: #cccccc;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: 0;
 }
 .stat-number {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 20px;
@@ -175,7 +175,7 @@ a {
        the text still gives:
          #333333 body text  ->  >= 8.9:1  (AAA normal text needs 7:1)
          #156130 "Us"       ->  >= 5.3:1  (AAA large text needs 4.5:1;
-                                           the h2 is 48px, well over
+                                           the h2 is 3rem (48px), well over
                                            the 24px large-text cutoff)
        Everywhere the clouds are whiter than that floor the contrast
        is higher still. */
@@ -201,7 +201,7 @@ a {
 }
 .about-heading {
     margin: 0;
-    font-size: 48px;
+    font-size: 3rem;
 }
 .about span {
     /* Same brand green as the hero "Eats" and the footer links. */
@@ -220,11 +220,11 @@ a {
 
 /* Sign Up Form */
 .form-heading {
-    font-size: 48px;
+    font-size: 3rem;
     margin: 0;
 }
 .form-intro {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 20px;
 }
 .form-section {
@@ -240,6 +240,9 @@ a {
     padding: 8px 20px;
     border: 2px solid #333333;
     font-family: 'Poppins', sans-serif;
+    /* Form controls don't inherit font size; without this they stay at
+       the browser's fixed ~13px and ignore the user's text-size setting. */
+    font-size: 1rem;
 }
 .input::-webkit-input-placeholder {
     color: #4d4d4d;
@@ -252,6 +255,7 @@ a {
     margin: 10px auto 0;
     width: 130px;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 .submit-button:hover {
     background-color: #dddddd;
@@ -284,7 +288,7 @@ a {
 }
 .social-links p {
     display: inline;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .social-links ion-icon {
     padding-right: 10px;
@@ -357,7 +361,7 @@ a {
         text-align: center;
     }
     .about-heading {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
     .footer {
         margin-top: 60px;
