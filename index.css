@@ -70,17 +70,20 @@ a {
 .hero-section {
     position: relative;
     display: flex;
-    flex-wrap: wrap-reverse;
+    /* The image comes first in the HTML; reversing the row puts the text
+       on the left and the image on the right without touching the markup.
+       No wrapping: the image shrinks instead (see .hero-image). */
+    flex-direction: row-reverse;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
     max-width: 800px;
     width: 100%;
     margin: 60px auto 100px;
     padding: 0 20px;
 }
 .hero-content {
-    min-width: 0;
+    /* The text keeps its natural width; the image absorbs any squeeze. */
+    flex-shrink: 0;
 }
 .hero-heading {
     font-size: clamp(2rem, 6vw + 1rem, 5rem);
@@ -101,9 +104,17 @@ a {
     margin-bottom: 30px;
 }
 .hero-image {
-    width: 100%;
-    max-width: 450px;
+    width: 350px;
+    min-width: 0;
+    flex-shrink: 1;
     height: auto;
+    /* Match the original design: hang 20px past the navbar's right edge,
+       and tuck the picture's white corner 45px behind the end of the
+       heading so it can reach its full 350px. */
+    margin-right: -20px;
+    margin-left: -45px;
+    position: relative;
+    z-index: -1;
 }
 .hero-link {
     display: inline-block;
@@ -355,6 +366,7 @@ a {
     .hero-image {
         width: 100%;
         max-width: 280px;
+        margin: 0;
     }
     .about-section {
         padding: 30px 20px;
